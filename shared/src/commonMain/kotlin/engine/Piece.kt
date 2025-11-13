@@ -16,13 +16,13 @@ object Piece {
 
 fun pieceType(piece: Int) = piece and 0b111
 
-fun pieceIsWhite(piece: Int) = (piece and Piece.WHITE) != 0
-
-fun pieceIsBlack(piece: Int) = (piece and Piece.BLACK) != 0
-
 fun pieceColor(piece: Int) =
     when {
-        pieceIsWhite(piece) -> Piece.WHITE
-        pieceIsBlack(piece) -> Piece.BLACK
+        isWhite(piece) -> Piece.WHITE
+        isBlack(piece) -> Piece.BLACK
         else -> Piece.NONE
     }
+
+fun isWhite(piece: Int) = (piece and Piece.WHITE) != 0
+
+fun isBlack(piece: Int) = (piece and Piece.BLACK) != 0
