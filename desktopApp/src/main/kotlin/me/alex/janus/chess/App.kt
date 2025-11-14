@@ -2,7 +2,7 @@ package me.alex.janus.chess
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
-import compose.ChessBoard
+import components.ChessBoard
 
 @Suppress("ktlint:standard:function-naming")
 @Composable
