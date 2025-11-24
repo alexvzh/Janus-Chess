@@ -13,16 +13,3 @@ object Piece {
     const val WHITE = 8
     const val BLACK = 16
 }
-
-fun pieceType(piece: Int) = piece and 0b111
-
-fun pieceColor(piece: Int) =
-    when {
-        isWhite(piece) -> Piece.WHITE
-        isBlack(piece) -> Piece.BLACK
-        else -> Piece.NONE
-    }
-
-fun isWhite(piece: Int) = (piece and Piece.WHITE) != 0
-
-fun isBlack(piece: Int) = (piece and Piece.BLACK) != 0
