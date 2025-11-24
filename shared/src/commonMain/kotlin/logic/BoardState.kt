@@ -28,4 +28,15 @@ class BoardState(
     ) {
         squares[square] = piece
     }
+
+    fun clone(): BoardState {
+        val copy = BoardState()
+        squares.copyInto(copy.squares)
+        copy.sideToMove = sideToMove
+        copy.castlingRights = castlingRights
+        copy.enPassantSquare = enPassantSquare
+        copy.halfmoveClock = halfmoveClock
+        copy.fullmoveNumber = fullmoveNumber
+        return copy
+    }
 }
